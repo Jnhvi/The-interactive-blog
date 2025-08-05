@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nocturnyx Notes</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/fav.ico" type="image/x-icon">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Notes Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader"></div>
-  </div>
 
-  <!-- Navbar -->
-  <nav class="navbar glass">
-    <div class="logo">nocturnyxNotes</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="notes.html">Notes</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><button id="themeToggle">🌙</button></li>
-    </ul>
-  </nav>
+  <!-- Navigation Bar -->
+  <header class="navbar glass">
+    <div class="logo">MyNotes</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle">🌙</button>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h1>Organized. Aesthetic. Yours.</h1>
-      <p>Access all your notes in one minimal, powerful space.</p>
-    </div>
-    <div class="hero-animation" id="lottie-hero"></div>
+  <section id="hero" class="parallax">
+    <h1 class="fade-in">Welcome to Your Notes Hub</h1>
+    <p class="fade-in delay">Quick access. Beautiful design. Total focus.</p>
   </section>
 
-  <script src="scripts.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <!-- Notes Section -->
+  <section id="notes" class="section">
+    <h2 class="reveal">Download Notes</h2>
+    <div class="cards">
+      <div class="card slide-up">
+        <h3>Sample Note</h3>
+        <p>High-quality PDF</p>
+        <a href="notes/sample-note.pdf" download>Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <h2>About</h2>
+    <p>This site is made to share curated notes. Stay tuned for more updates and uploads!</p>
+  </section>
+
 </body>
 </html>
